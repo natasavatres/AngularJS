@@ -1,0 +1,48 @@
+
+#panel, #flip {
+	
+    padding: 15px;
+    position: center;
+    text-align: center;
+    width: auto;
+    background-color: grey;
+    border: solid 1px black;
+    font: bolder;
+}
+
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+#BigContainer{
+	height: 1500px;
+	
+}
+
+#forma{
+margin-top: 20px;
+}
+#calendar{
+font-size: 17px;
+align-content: center;
+margin-right: auto;
+margin-top: 10px;
+height: 100px;
+}
+.dateField {
+width: 140px;
+padding: 6px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+color: #555;
+background-color: #9BB4FA;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+#popupDateField:hover {
+background-color: #cde;
+cursor: pointer;
+}

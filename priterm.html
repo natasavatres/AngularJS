@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2Fit Programi i termini</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<meta http-equiv="Content-Language" content="sr" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+    <LINK REL="SHORTCUT ICON"
+       HREF="img/fav.jpg">
+
+
+
+         <!--pesma-->
+<link href="css/bgaudioplayer.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<script src="js/bgaudioplayer.js">
+
+
+</script>
+</head>
+<body>
+
+
+<div id="naslovLogo" style="white-space:nowrap">
+	<div style=" white-space:nowrap; font: verdana; font-size: 60px; line-height: 60px;
+				text-align: center; text-shadow: 3px 5px 10px #000;"> 
+         <strong>Fitness Centar</strong>
+    </div>
+    <div id="image">
+        <img src="img/logo.png" class="img-responsive" style="margin: auto;  height: 160px;">
+    </div>
+</div>
+
+<ul class="meni" id="navMeni">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="onama.html">O nama</a></li>
+  <li><a href="galerija.html">Galerija</a></li>
+  <li><a href="priterm.html">Programi i termini</a></li>
+  <li><a href="treneri.html">Treneri</a></li>
+  <li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+<div id="Container">
+<audio id="mybgplayer">
+<source src="music.mp3" type="audio/mpeg">
+<source src="music.ogg" type="audio/ogg">
+</audio>
+<audio id="mybgplayer">
+<source src="music.mp3" type="audio/mpeg">
+<source src="music.ogg" type="audio/ogg">
+</audio>
+
+<div id="mybgplayerui" class="bgplayerui">
+<img class="play" src="img/play.gif" data-pausesrc="img/pause.gif" /> <img class="rewind" src="img/restart.gif" style="position:relative; left:-4px" /> <div class="volume"></div>
+
+</div>
+
+<script>
+
+
+var playerinstance=bgaudioplayer({
+  audioid: 'mybgplayer', // id of audio element
+  audiointerface: 'mybgplayerui', // id of corresponding UI div
+  autoplay: true, // auto play music?
+  persistTimeLine: true, // Persist player's current timeline/ volume when moving from page to page?
+  volume: 0.1, // Default volume (0.0 to 1.0)
+  volumelevels: 15 // # of volume bars to show in UI
+})
+
+</script>
+
+<div class="table-responsive">
+<table class="table table-hover table-inverse">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Ponedeljak</th>
+      <th>Utorak</th>
+      <th>Sreda</th>
+      <th>Cetvrtak</th>
+      <th>Petak</th>
+      <th>Subota</th>
+      <th>Nedelja</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">08:00 - 09:30</th>
+      <td>Fit Ball</td>
+      <td>Yoga</td>
+      <td>Aerobic</td>
+      <td>Zumba</td>
+      <td>Cardio box</td>
+      <td>Aerobic low</td>
+      <td>Body sculpting</td>
+    </tr>
+    <tr>
+      <th scope="row">10:00 - 11:30</th>
+      <td>Pilates</td>
+      <td>BodyPump</td>
+      <td>BodyBalance</td>
+      <td>Fit Ball</td>
+      <td>Yoga</td>
+      <td>Aerobic</td>
+      <td>Zumba</td>
+    </tr>
+    <tr>
+      <th scope="row">12:00 - 13:30</th>
+      <td>Zumba</td>
+      <td>Cardio box</td>
+      <td>Aerobic low</td>
+      <td>Yoga</td>
+      <td>Aerobic</td>
+      <td>Zumba</td>
+      <td>Body sculpting</td>
+    </tr><tr>
+      <th scope="row">14:00 - 15:30</th>
+      <td>Fit Ball</td>
+      <td>Yoga</td>
+      <td>Aerobic</td>
+      <td>Zumba</td>
+      <td>Cardio box</td>
+      <td>Aerobic low</td>
+      <td>Body sculpting</td>
+    </tr>
+    <tr>
+      <th scope="row">16:00 - 17:30</th>
+      <td>Pilates</td>
+      <td>BodyPump</td>
+      <td>BodyBalance</td>
+      <td>Body sculpting</td>
+      <td>Zumba</td>
+      <td>Cardio box</td>
+      <td>Aerobic low</td>
+    </tr>
+    <tr>
+      <th scope="row">18:00 - 19:30</th>
+      <td>Zumba</td>
+      <td>Cardio box</td>
+      <td>Aerobic low</td>
+      <td>Pilates</td>
+      <td>BodyPump</td>
+      <td>BodyBalance</td>
+      <td>Body sculpting</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<a href="kontakt.html" class="btn btn-default" style="background-color: #ffa366">Rezervisite termin</a>
+
+</object>
+</div>
+</body>
+</html>

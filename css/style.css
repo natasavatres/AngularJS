@@ -1,0 +1,203 @@
+h1{
+  font: verdana; 
+  font-size: 60px; 
+  color: #ffffff; 
+  line-height: 60px;
+  text-align: center;
+}
+
+
+h2, h3, h4{
+  font: verdana;
+}
+
+p.vizImis{
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  color: #333;
+}
+
+.container{
+  color: #7a7c7f; 
+  font-size: 29px;
+   font-family: "Libre Baskerville", serif; 
+   line-height: 45px; 
+    text-shadow: 0 1px 1px #fff; 
+
+}
+ul.meni {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+
+}
+
+ul.meni li {float: left;}
+
+ul.meni li a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.meni li a:hover {background-color: #555;}
+
+#mapa{
+	position: relative;
+	}
+ 
+.prethodni, .sledeci {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.sledeci {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prethodni:hover, .sledeci:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.txtSlider{
+  text-shadow: 2px 2px #ff0000;
+}
+
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+}
+
+#vest{
+  background-color:  #333;
+  font: verdana; 
+  font-size: 60px; 
+  font: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px #ff0000;
+}
+
+form { 
+border: 1px dotted #aaaaaa; 
+padding: 3px 6px 3px 6px; 
+} 
+input.txt { 
+color: #00008B; 
+background-color: #ADD8E6; 
+border: 1px inset #00008B; 
+width: 200px; 
+} 
+input.btn { color: #00008B; 
+background-color: #ADD8E6; 
+border: 1px outset #00008B; 
+padding: 2px 4px 2px 4px; 
+}
+
+#posete{
+  top: 10px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+
+#Desno{
+position: absolute;
+margin:70px 200px 300px 1000px;
+text-align: left;
+background:white;
+border: thick black dotted;
+border-bottom:thick black dotted;
+}
+
+#anketa{
+text-align:center;
+
+}
+
+#footer{
+
+background: #333;
+width: auto;
+height: auto;
+border-style:ridge;
+border-width:2px;
+border-color:black;
+text-align: center;
+padding: 20px 5px;
+
+}
+#Container{
+  background-color: hsl(0, 0%, 70%);
+}
+
+#naslov{
+ color: black;
+  font-family: 'Lobster',cursive; 
+   font-size: 36px; 
+   font-weight: normal; 
+   line-height: 48px;
+    margin: 0 0 18px; 
+   text-shadow: 1px 0 0 #fff;
+ }
+
+#lista{
+  width: 200px;
+}
+
+h2 {
+  font: 400 40px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+li:last-child {
+  border: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  width: 200px;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}

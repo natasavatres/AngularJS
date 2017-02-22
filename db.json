@@ -1,0 +1,22 @@
+{
+  "Treneri": [
+    {
+      ime: 'Natasa',
+      prezime: 'Vatres',
+      email:'natasa@gnail.com',
+      telefon:'1234567'
+    },
+    {
+      ime: 'Ana',
+      prezime: 'Dedovic',
+      email:'ana@gmail.com',
+      telefon:'1234567'
+    },
+      {
+      ime: 'Valentina',
+      prezime: 'Andjelkovic',
+      email:'valentina@gmail.com',
+      telefon:'1234567'
+    }
+  ]
+}
