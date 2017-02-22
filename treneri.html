@@ -33,6 +33,7 @@
     </script>
     
     <script src="//code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
+<!--    <script src="//code.angularjs.org/1.3.0-rc.1/angular-route.min.js"></script>-->
     <script src="js/treneri.js"></script>
 
 </head>
@@ -60,23 +61,22 @@
     
      <div ng-controller="treneriController">
     <div class="row">
-  <div id="lista" style="width: 600px" class="col-md-6">
+  <div style="width: 600px" class="col-md-6">
 
 
 <ul>
     <li ng-repeat="treneri in treneri">
-      <p><a href="#"> {{treneri.ime}} </p>
-<!--
-      <p> Prezime: {{treneri.prezime}}</p>
-      <p> E-mail: {{treneri.email}}</p>
-      <p> Telefon: {{treneri.telefon}}</p>  
--->
+       {{treneri.ime + " " + treneri.prezime}}
+        <a href="#" id="obrisi" ng-click="obrisiTrenera(trener)"> Obrisi </a>
+        <hr></hr>
  </li>
 </ul>
 
 <ul>
     <li>
-      <p><a href="#"> {{ime}} </p>
+      {{ime + " " + prezime}}
+       <a href="#" id="obrisi" ng-click="obrisiTrenera(trener)"> Obrisi </a>
+        <hr></hr>
  </li>
 </ul>
 
@@ -84,12 +84,12 @@
   </div>
   
   <div style="width: 778px" class="col-md-6">
-      
+
     <form class="form-horizontal">
   <div class="form-group">
     <label for="inputIme" class="col-sm-2 control-label">Ime</label>
     <div class="col-sm-10">
-      <input type="ime" ng-model="ime" class="form-control" id="inputIme" placeholder="Ime">
+      <input type="ime" class="form-control" id="ime" placeholder="Ime" value=" {{ current.ime }} " ng-model="current.ime">
       
       <div class="alert alert-warning" ng-show="ime.length <= najmanje">
           Ime mora da sadrži najmanje 3 slova!
@@ -100,12 +100,13 @@
       
     </div>
   </div>
+
   <div class="form-group">
     <label for="inputPrezime" class="col-sm-2 control-label">Prezime</label>
     <div class="col-sm-10">
-      <input type="prezime" ng-model="prezime" class="form-control" id="inputPrezime" placeholder="Prezime">
+      <input type="prezime" class="form-control" id="prezime" placeholder="Prezime" value=" {{ current.prezime }}" ng-model="current.prezime">
       
-      <div class="alert alert-warning" ng-show="prezime.length <= najmanje">
+      <div class="alert alert-warning" ng-show="prezime.length <= najmanje ">
           Prezime mora da sadrži najmanje 3 slova!
       </div>
       <div class="alert alert-danger" ng-show="prezime.length >= najvise">
@@ -114,35 +115,39 @@
       
     </div>
   </div>
+
   <form class="form-horizontal">
   <div class="form-group">
     <label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
     <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+      <input type="email"  class="form-control" id="email" placeholder="E-mail" value=" {{ current.email }}" ng-model="current.email">
     </div>
   </div>
+
   <form class="form-horizontal">
   <div class="form-group">
     <label for="inputTelefon" class="col-sm-2 control-label">Broj telefona</label>
     <div class="col-sm-10">
-      <input type="telefon" class="form-control" id="inputTelefon" placeholder="Broj telefona">
+      <input type="telefon" class="form-control" id="telefon" placeholder="Broj telefona" value=" {{ current.telefon }}" ng-model="current.telefon">
     </div>
   </div>
+
   <div class="form-group">
     <label for="inputSS" class="col-sm-2 control-label">Stručna sprema</label>
     <div class="col-sm-10">
-      <input type="ss" class="form-control" id="inputSS" placeholder="Stručna sprema">
+      <input type="ss" class="form-control" id="ss" placeholder="Stručna sprema" value=" {{ current.ss }}" ng-model="current.ss">
     </div>
   </div>
+
   <div class="form-group">
     <label for="inputTrening" class="col-sm-2 control-label">Trening</label>
     <div class="col-sm-10">
-      <input type="trening" class="form-control" id="inputTrening" placeholder="Trening">
+      <input type="trening" class="form-control" id="trening" placeholder="Trening" value=" {{ current.trening }}" ng-model="current.trening">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="sacuvaj" class="btn btn-default" ng-click="alertClick()">Sačuvaj</button>
+      <button ng-click="dodajTrenera(current)" type="sacuvaj" class="btn btn-default" ng-click="alertClick()">Dodaj</button>
     </div>
   </div>
 </form>
