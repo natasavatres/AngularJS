@@ -5,27 +5,30 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
     
      $scope.treneri = [
     {
-      "ime": "Nata",
-      "prezime": "sajkfhla",
-    "email":"asjkfd@aljksd.com",
+        "id": 1,
+      "ime": "Nataša",
+      "prezime": "Vatreš",
+    "email":"natasa@gmail.com",
       "telefon":1234567,
-    "ss": "sdgfsa",
-        "trening": "shafdba"
+        "ss": "aaaa",
+        "trening": "bbbb"
         
     }, {
-      "ime": "Anci",
-      "prezime": "sajkfhla",
-    "email":"asjkfd@aljksd.com",
+        "id": 2,
+      "ime": "Ana",
+      "prezime": "Dedović",
+    "email":"ana@gmail.com",
       "telefon":1234567,
-    "ss": "sdgfsa",
-        "trening": "shafdba"
+    "ss": "aaaa",
+        "trening": "bbbb"
     }, {
-       "ime": "Vanja",
-      "prezime": "sajkfhla",
-    "email":"asjkfd@aljksd.com",
+        "id": 3,
+       "ime": "Valentina",
+      "prezime": "Anđelković",
+    "email":"valentina@gmail.com",
       "telefon":1234567,
-    "ss": "sdgfsa",
-        "trening": "shafdba"
+    "ss": "aaaa",
+        "trening": "bbbb"
     }
 ];
     
@@ -33,24 +36,40 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
         alert("Uspešno dodato :D");
         $scope.treneri.push(trener);
          $scope.current = {};
+    };  
+    
+    $scope.obrisiTrenera = function(treneri){
+        var rezultat = confirm('Da li ste sigurni da želite da obrišete trenera?');
+        if(rezultat==true){
+        var indexZaBrisanje = vratiSelektovanog(treneri.id);
+        $scope.treneri.splice(indexZaBrisanje, 1);
+        }
     };
     
+    function vratiSelektovanog(id){
+        for(var i=0; i<$scope.treneri.length; i++)
+            if($scope.treneri[i].id==id)
+                return i;
+        return -1;
+    }
     
-    $scope.obrisiTrenera = function(trener){
-        var trenerZaBrisanje = $scope.treneri.indexOf(trener);
-        $scope.treneri.splice(trenerZaBrisanje, 1);
+    $scope.izmeniTrenera = function(trener){
+        var index = vratiSelektovanog(trener.id);
+        var trener = $scope.treneri[index];
+        $scope.ime = trener.ime;
+        $scope.prezime = trener.prezime;
+        $scope.email = trener.email;
+        $scope.telefon = trener.telefon;
+        $scope.ss = trener.ss;
+        $scope.trening = trener.trening;
     };
-    
-//    $scope.izmeniTrenera = function(trener){
-//        $scope.current = trener;
-//    };
     
 //      $scope.sacuvajTrenera = function(trener){
 //            alert("Uspešno sačuvano :D");
 //          $scope.current = {};
 //    };
     
-    $scope.current = {};
+//    $scope.current = {};
 
 //    alert pocinje
     
@@ -86,30 +105,3 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
 //        
 //    };
 }]);
-
-//var rute = angular.module('rute', []);
-//
-//rute.config(['$routeProvider',function($routeProvider){
-//    
-//  $routeProvider 
-//
-//  .when('/', {
-//    templateUrl: 'stranice/vizija.html', 
-//    controller: 'vizijaController'
-//  })
-//
-//  .when('/misija')
-//    templateUrl: 'stranice/misija.html', 
-//    controller: 'misijaController'
-//})
-//
-//});
-//
-//rute.controller('vizijaController',['$scope', function ($scope) {
-//    
-//  }]);
-//
-//
-//rute.controller('misijaController',['$scope', function ($scope) {
-//
-//  }]);

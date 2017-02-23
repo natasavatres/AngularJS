@@ -67,7 +67,8 @@
 <ul>
     <li ng-repeat="treneri in treneri">
        {{treneri.ime + " " + treneri.prezime}}
-        <a href="#" id="obrisi" ng-click="obrisiTrenera(trener)"> Obrisi </a>
+        <a href="#" id="obrisi" ng-click="obrisiTrenera(treneri)"> Obriši </a>
+        <a href="#" id="izmeni" ng-click="izmeniTrenera(treneri)"> Izmeni </a>
         <hr></hr>
  </li>
 </ul>
@@ -75,8 +76,6 @@
 <ul>
     <li>
       {{ime + " " + prezime}}
-       <a href="#" id="obrisi" ng-click="obrisiTrenera(trener)"> Obrisi </a>
-        <hr></hr>
  </li>
 </ul>
 
@@ -89,7 +88,7 @@
   <div class="form-group">
     <label for="inputIme" class="col-sm-2 control-label">Ime</label>
     <div class="col-sm-10">
-      <input type="ime" class="form-control" id="ime" placeholder="Ime" value=" {{ current.ime }} " ng-model="current.ime">
+      <input type="ime" class="form-control" id="ime" placeholder="Ime" value=" {{ current.ime }} " ng-model="ime">
       
       <div class="alert alert-warning" ng-show="ime.length <= najmanje">
           Ime mora da sadrži najmanje 3 slova!
