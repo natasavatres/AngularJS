@@ -170,3 +170,17 @@ ul {
     margin-top: 20px;
   padding: 0;
 }
+
+
+/*ANIMATIONS */
+
+/* The starting CSS styles for the enter animation */
+main.ng-enter {
+  transition:1s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+main.ng-enter.ng-enter-active {
+  opacity:1;
+}
