@@ -5,7 +5,7 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
     
      $scope.treneri = [
     {
-        "id": 1,
+       "id": 1, 
       "ime": "Nataša",
       "prezime": "Vatreš",
     "email":"natasa@gmail.com",
@@ -14,7 +14,7 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
         "trening": "bbbb"
         
     }, {
-        "id": 2,
+         "id": 2,
       "ime": "Ana",
       "prezime": "Dedović",
     "email":"ana@gmail.com",
@@ -22,7 +22,7 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
     "ss": "aaaa",
         "trening": "bbbb"
     }, {
-        "id": 3,
+         "id": 3,
        "ime": "Valentina",
       "prezime": "Anđelković",
     "email":"valentina@gmail.com",
@@ -32,10 +32,26 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
     }
 ];
     
-    $scope.dodajTrenera = function(trener){
-        alert("Uspešno dodato :D");
-        $scope.treneri.push(trener);
-         $scope.current = {};
+    $scope.dodajTrenera = function(){
+        if($scope.ime.length>2 && $scope.ime.length<30 && $scope.prezime.length>2 && $scope.prezime.length<30 ){
+        $scope.treneri.push({
+            ime: $scope.ime,
+            prezime: $scope.prezime,
+            email: $scope.email,
+            telefon: $scope.telefon,
+            ss: $scope.ss,
+            trening: $scope.trening
+        });
+            alert("Uspešno dodato :D ");
+        }else{
+            alert("Greška prilikom unosa :( ");
+        }
+        $scope.ime = '';
+        $scope.prezime = '';
+        $scope.email = '';
+        $scope.telefon = '';
+        $scope.ss = '';
+        $scope.trening = '';
     };  
     
     $scope.obrisiTrenera = function(treneri){
@@ -64,10 +80,26 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
         $scope.trening = trener.trening;
     };
     
-//      $scope.sacuvajTrenera = function(trener){
-//            alert("Uspešno sačuvano :D");
-//          $scope.current = {};
-//    };
+      $scope.sacuvajTrenera = function(trener){      
+          var index = vratiSelektovanog(trener.id);
+           if($scope.ime.length>2 && $scope.ime.length<30 && $scope.prezime.length>2 && $scope.prezime.length<30 ){
+            alert("Uspešno je izmenjeno :D ");
+          $scope.treneri[index].ime = $scope.ime;
+          $scope.treneri[index].prezime = $scope.prezime;
+          $scope.treneri[index].email = $scope.email;
+          $scope.treneri[index].telefon = $scope.telefon;
+          $scope.treneri[index].ss = $scope.ss;
+          $scope.treneri[index].trening = $scope.trening;
+           }else{
+               alert("Greška prilikom izmene :( ");
+           }
+          $scope.ime = '';
+        $scope.prezime = '';
+        $scope.email = '';
+        $scope.telefon = '';
+        $scope.ss = '';
+        $scope.trening = '';
+    };
     
 //    $scope.current = {};
 
@@ -87,16 +119,16 @@ treneri.controller('treneriController',['$scope', '$filter', '$http', function (
     
     
     //------------------
-    console.log(angular.toJson($scope.treneri));
-    
-    $http.get('/db.json')
-        .success(function(podaciOTrenerima){
-//            console.log(podaciOTrenerima);
-        $scope.treneri = podaciOTrenerima;
-    })
-        .error(function(podaci, status){
-            console.log(podaci);
-    });
+//    console.log(angular.toJson($scope.treneri));
+//    
+//    $http.get('/db.json')
+//        .success(function(podaciOTrenerima){
+////            console.log(podaciOTrenerima);
+//        $scope.treneri = podaciOTrenerima;
+//    })
+//        .error(function(podaci, status){
+//            console.log(podaci);
+//    });
     
 //    $scope.noviTrener = '';
 //    $scope.dodajTrenera = function(){

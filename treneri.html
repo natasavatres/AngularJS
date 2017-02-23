@@ -69,15 +69,18 @@
        {{treneri.ime + " " + treneri.prezime}}
         <a href="#" id="obrisi" ng-click="obrisiTrenera(treneri)"> Obriši </a>
         <a href="#" id="izmeni" ng-click="izmeniTrenera(treneri)"> Izmeni </a>
+        <a href="#" id="sacuvaj" ng-click="sacuvajTrenera(treneri)"> Sačuvaj </a>
         <hr></hr>
  </li>
 </ul>
 
+<!--
 <ul>
     <li>
       {{ime + " " + prezime}}
  </li>
 </ul>
+-->
 
 
   </div>
@@ -88,7 +91,7 @@
   <div class="form-group">
     <label for="inputIme" class="col-sm-2 control-label">Ime</label>
     <div class="col-sm-10">
-      <input type="ime" class="form-control" id="ime" placeholder="Ime" value=" {{ current.ime }} " ng-model="ime">
+      <input type="ime" class="form-control" placeholder="Ime" ng-model="ime">
       
       <div class="alert alert-warning" ng-show="ime.length <= najmanje">
           Ime mora da sadrži najmanje 3 slova!
@@ -103,7 +106,7 @@
   <div class="form-group">
     <label for="inputPrezime" class="col-sm-2 control-label">Prezime</label>
     <div class="col-sm-10">
-      <input type="prezime" class="form-control" id="prezime" placeholder="Prezime" value=" {{ current.prezime }}" ng-model="current.prezime">
+      <input type="prezime" class="form-control" placeholder="Prezime" ng-model="prezime">
       
       <div class="alert alert-warning" ng-show="prezime.length <= najmanje ">
           Prezime mora da sadrži najmanje 3 slova!
@@ -119,7 +122,7 @@
   <div class="form-group">
     <label for="inputEmail" class="col-sm-2 control-label">E-mail</label>
     <div class="col-sm-10">
-      <input type="email"  class="form-control" id="email" placeholder="E-mail" value=" {{ current.email }}" ng-model="current.email">
+      <input type="email" class="form-control" placeholder="E-mail" ng-model="email">
     </div>
   </div>
 
@@ -127,26 +130,27 @@
   <div class="form-group">
     <label for="inputTelefon" class="col-sm-2 control-label">Broj telefona</label>
     <div class="col-sm-10">
-      <input type="telefon" class="form-control" id="telefon" placeholder="Broj telefona" value=" {{ current.telefon }}" ng-model="current.telefon">
+      <input type="telefon" class="form-control" placeholder="Broj telefona" ng-model="telefon">
     </div>
   </div>
 
   <div class="form-group">
     <label for="inputSS" class="col-sm-2 control-label">Stručna sprema</label>
     <div class="col-sm-10">
-      <input type="ss" class="form-control" id="ss" placeholder="Stručna sprema" value=" {{ current.ss }}" ng-model="current.ss">
+      <input type="ss" class="form-control" placeholder="Stručna sprema" ng-model="ss">
     </div>
   </div>
 
   <div class="form-group">
     <label for="inputTrening" class="col-sm-2 control-label">Trening</label>
     <div class="col-sm-10">
-      <input type="trening" class="form-control" id="trening" placeholder="Trening" value=" {{ current.trening }}" ng-model="current.trening">
+      <input type="trening" class="form-control" placeholder="Trening" ng-model="trening">
     </div>
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button ng-click="dodajTrenera(current)" type="sacuvaj" class="btn btn-default" ng-click="alertClick()">Dodaj</button>
+      <button ng-click="dodajTrenera()" class="btn btn-default" ng-click="alertClick()">Dodaj</button>
+<!--      <button ng-click="sacuvajTrenera()" class="btn btn-default" ng-click="alertClick()">Sačuvaj</button>-->
     </div>
   </div>
 </form>
